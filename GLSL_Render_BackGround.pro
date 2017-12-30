@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui opengl
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,22 +13,21 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        MainWindow.cpp \
-    RenderForm.cpp \
-    textfile.cpp \
-    GLRender.cpp
+    WallpaperUtils.cpp \
+    GLViewWidget.cpp
 
-HEADERS  += MainWindow.h \
-    RenderForm.h \
-    tool.h \
-    textfile.h \
-    GLRender.h
+HEADERS  += \
+    WallpaperUtils.h \
+    GLViewWidget.h
 
-FORMS    += MainWindow.ui \
-    RenderForm.ui
+FORMS    += \
+    GLViewWidget.ui
 
 INCLUDEPATH += $$PWD/include
 
 LIBS        += -L$$PWD/lib
 LIBS        += -lfreeglut -lglew32 -lglew32s
 LIBS        += -luser32
+
+DISTFILES += \
+    curve.flag

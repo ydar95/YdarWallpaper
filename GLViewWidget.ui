@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>RenderForm</class>
- <widget class="QWidget" name="RenderForm">
+ <class>GLViewWidget</class>
+ <widget class="QWidget" name="GLViewWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>746</width>
+    <height>429</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>GLSL Render Form</string>
+   <string>Form</string>
   </property>
  </widget>
  <resources/>

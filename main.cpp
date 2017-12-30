@@ -1,17 +1,21 @@
-#include "MainWindow.h"
-#include "RenderForm.h"
 #include <QApplication>
-#include <opengl/glut.h>
+#include <Windows.h>
+#include "GLViewWidget.h"
+
+#include "WallpaperUtils.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    a.setQuitOnLastWindowClosed(false);
 
-    RenderForm::InstancePtr.reset(new RenderForm);
-    RenderForm::InstancePtr->show();
+    GLViewWidget view;
 
-    MainWindow::InstancePtr.reset(new MainWindow);
-    MainWindow::InstancePtr->show();
+    view.show();
+    view.updateGL();
+
+    SetParent((HWND)view.winId(),WallpaperUtils::GetWorkerW());
+    view.showFullScreen();
+    view.setFragmentByFile("C:/Users/yd/Documents/qt/QT_GLSL_TEST/fsrc.frag");
+    view.updateGL();
 
 
     return a.exec();
