@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui opengl
-CONFIG   += qscintilla2
+#CONFIG   += qscintilla2
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,14 +15,23 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     WallpaperUtils.cpp \
-    GLViewWidget.cpp
+    GLViewWidget.cpp \
+    MainWindow.cpp \
+    QsciLexerGlsl.cpp \
+    Tool/OpenGlOffscreenSurface.cpp \
+    Tool/ExamplePaintSurface.cpp
 
 HEADERS  += \
     WallpaperUtils.h \
-    GLViewWidget.h
+    GLViewWidget.h \
+    MainWindow.h \
+    QsciLexerGlsl.h \
+    Tool/OpenGlOffscreenSurface.h \
+    Tool/ExamplePaintSurface.h
 
 FORMS    += \
-    GLViewWidget.ui
+    GLViewWidget.ui \
+    MainWindow.ui
 
 INCLUDEPATH += $$PWD/include
 
