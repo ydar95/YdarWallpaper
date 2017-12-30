@@ -5,10 +5,11 @@
 #-------------------------------------------------
 
 QT       += core gui opengl
+CONFIG   += qscintilla2
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = GLSL_Render_BackGround
+TARGET = YdarWallpaper
 TEMPLATE = app
 
 
