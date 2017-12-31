@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with GLShaderDev.  If not, see <http://www.gnu.org/licenses/>
  */
-
+#if 0
 #ifndef QSCILEXERGLSL_H
 #define QSCILEXERGLSL_H
 
@@ -66,3 +66,4 @@ private:
 };
 
 #endif // SHADERLEXER_H
+#endif

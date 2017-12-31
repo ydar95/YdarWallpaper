@@ -1,15 +1,15 @@
 #include "GLViewWidget.h"
-#include "ui_GLViewWidget.h"
+//#include "ui_GLViewWidget.h"
 
 #include<QTimer>
 
 #include<ctime>
 GLViewWidget::GLViewWidget(QWidget *parent) :
     QGLWidget(parent),
-    m_time(clock()),
-    ui(new Ui::GLViewWidget)
+    m_time(clock())//,
+    //ui(new Ui::GLViewWidget)
 {
-    ui->setupUi(this);
+    //ui->setupUi(this);
 
 
     QTimer *timer = new QTimer(this);
@@ -19,7 +19,7 @@ GLViewWidget::GLViewWidget(QWidget *parent) :
 
 GLViewWidget::~GLViewWidget()
 {
-    delete ui;
+    //delete ui;
 }
 
 void GLViewWidget::initializeGL(){
@@ -30,6 +30,7 @@ void GLViewWidget::initializeGL(){
     glEnable(GL_COLOR_MATERIAL);
 
     m_program.addShaderFromSourceCode(QGLShader::Fragment,"void main(void) {gl_FragColor=vec4(0,1,0, 1.0);}");
+    //m_program.addShaderFromSourceFile(QGLShader::Fragment,"C:/Users/yd/Documents/qt/QT_GLSL_TEST/fsrc.frag");
     m_program.link();
     m_program.bind();  // 使该shader真正启动（绑定到当前的opengl上下文中）
 

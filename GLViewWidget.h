@@ -7,9 +7,9 @@
 #include <QString>
 #include <QDebug>
 #include <opengl/freeglut.h>
-namespace Ui {
-class GLViewWidget;
-}
+//namespace Ui {
+//class GLViewWidget;
+//}
 
 class GLViewWidget : public QGLWidget
 {
@@ -38,7 +38,7 @@ private slots:
     void slots_update();
 private:
     GLfloat m_time;
-    Ui::GLViewWidget *ui;
+    //Ui::GLViewWidget *ui;
 };
 
 #endif // GLVIEWWIDGET_H

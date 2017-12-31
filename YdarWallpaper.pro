@@ -16,22 +16,23 @@ TEMPLATE = app
 SOURCES += main.cpp\
     WallpaperUtils.cpp \
     GLViewWidget.cpp \
-    MainWindow.cpp \
     QsciLexerGlsl.cpp \
     Tool/OpenGlOffscreenSurface.cpp \
-    Tool/ExamplePaintSurface.cpp
+    Tool/ExamplePaintSurface.cpp \
+    GUI/DIY_QWidget.cpp \
+    GUI/MainWidget.cpp
 
 HEADERS  += \
     WallpaperUtils.h \
     GLViewWidget.h \
-    MainWindow.h \
     QsciLexerGlsl.h \
     Tool/OpenGlOffscreenSurface.h \
-    Tool/ExamplePaintSurface.h
+    Tool/ExamplePaintSurface.h \
+    GUI/DIY_QWidget.h \
+    GUI/MainWidget.h
 
 FORMS    += \
-    GLViewWidget.ui \
-    MainWindow.ui
+    GLViewWidget.ui
 
 INCLUDEPATH += $$PWD/include
 
@@ -41,3 +42,6 @@ LIBS        += -luser32
 
 DISTFILES += \
     curve.flag
+
+RESOURCES += \
+    res.qrc

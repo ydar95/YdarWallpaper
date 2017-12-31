@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with GLShaderDev.  If not, see <http://www.gnu.org/licenses/>
  */
-
+#if 0
 #include <Qsci/qsciscintilla.h>
 #include <QDebug>
 
@@ -171,3 +171,4 @@ void QsciLexerGLSL::styleLine(const QString& line, int size)
   setStyling(size, Default);
   qDebug() << "styleLine(" + line;
 }
+#endif
