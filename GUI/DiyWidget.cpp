@@ -1,4 +1,4 @@
-#include "DIY_QWidget.h"
+#include "DiyWidget.h"
 #include <QApplication>
 #include <QPixmap>
 #include <QPainter>
@@ -7,7 +7,7 @@
 #include <QLabel>
 #include <QMouseEvent>
 #include <QScrollBar>
-DIY_QWidget::DIY_QWidget(QWidget *parent) :
+DiyWidget::DiyWidget(QWidget *parent) :
     QWidget(parent),
     m_moveing(false),
     m_close_btn_status(0),
@@ -61,12 +61,12 @@ DIY_QWidget::DIY_QWidget(QWidget *parent) :
     connect(m_close_btn, SIGNAL(released()), this, SLOT(m_slots_close_btn_release()));
 }
 
-void DIY_QWidget::paintEvent(QPaintEvent *e){
+void DiyWidget::paintEvent(QPaintEvent *e){
     QPainter painter(this);
     painter.drawPixmap(0,0,m_pix);
 }
 
-void DIY_QWidget::mouseMoveEvent(QMouseEvent *e){
+void DiyWidget::mouseMoveEvent(QMouseEvent *e){
     const auto enterBtn=[](QPoint pp, QPushButton *btn)->bool
     {
        int height = btn->height();
@@ -119,7 +119,7 @@ void DIY_QWidget::mouseMoveEvent(QMouseEvent *e){
     return QWidget::mousePressEvent(e);
 }
 
-void DIY_QWidget::mousePressEvent(QMouseEvent *e){
+void DiyWidget::mousePressEvent(QMouseEvent *e){
     const auto enterLab=[](QPoint pp, QLabel *lab)->bool
     {
        int height = lab->height();
@@ -143,16 +143,17 @@ void DIY_QWidget::mousePressEvent(QMouseEvent *e){
     return QWidget::mousePressEvent(e);
 }
 
-void DIY_QWidget::mouseReleaseEvent(QMouseEvent *e){
+void DiyWidget::mouseReleaseEvent(QMouseEvent *e){
     this->m_moveing=false;
     return QWidget::mousePressEvent(e);
 }
 
 
-void DIY_QWidget::m_slots_mini_btn_release(){
+void DiyWidget::m_slots_mini_btn_release(){
     this->showMinimized();
 }
 
-void DIY_QWidget::m_slots_close_btn_release(){
+void DiyWidget::m_slots_close_btn_release(){
     this->close();
 }
+

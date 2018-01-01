@@ -8,11 +8,11 @@ class QPushButton;
 class QLabel;
 class QPoint;
 
-class DIY_QWidget : public QWidget
+class DiyWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit DIY_QWidget(QWidget *parent = 0);
+    explicit DiyWidget(QWidget *parent = 0);
 
 protected:
     void paintEvent(QPaintEvent *e);
@@ -21,8 +21,8 @@ protected:
     virtual void mouseReleaseEvent(QMouseEvent *e);
 
 private slots:
-    void m_slots_mini_btn_release();
-    void m_slots_close_btn_release();
+    virtual void m_slots_mini_btn_release();
+    virtual void m_slots_close_btn_release();
 private:
     QPixmap  m_pix;
     QPushButton *m_mini_btn;

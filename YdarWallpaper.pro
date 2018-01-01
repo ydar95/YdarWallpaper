@@ -18,18 +18,20 @@ SOURCES += main.cpp\
     GLViewWidget.cpp \
     QsciLexerGlsl.cpp \
     Tool/OpenGlOffscreenSurface.cpp \
-    Tool/ExamplePaintSurface.cpp \
-    GUI/DIY_QWidget.cpp \
-    GUI/MainWidget.cpp
+    GUI/MainWidget.cpp \
+    GUI/DiyWidget.cpp \
+    GUI/DiyListView.cpp \
+    Tool/GlslPaintSurface.cpp
 
 HEADERS  += \
     WallpaperUtils.h \
     GLViewWidget.h \
     QsciLexerGlsl.h \
     Tool/OpenGlOffscreenSurface.h \
-    Tool/ExamplePaintSurface.h \
-    GUI/DIY_QWidget.h \
-    GUI/MainWidget.h
+    GUI/MainWidget.h \
+    GUI/DiyWidget.h \
+    GUI/DiyListView.h \
+    Tool/GlslPaintSurface.h
 
 FORMS    += \
     GLViewWidget.ui

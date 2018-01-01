@@ -7,4 +7,7 @@
         <file alias="Mini_Btn_Default.png">GUI/resource/Mini_Btn_Default.png</file>
         <file alias="Mini_Btn_Touch.png">GUI/resource/Mini_Btn_Touch.png</file>
     </qresource>
+    <qresource prefix="/">
+        <file>test.png</file>
+    </qresource>
 </RCC>

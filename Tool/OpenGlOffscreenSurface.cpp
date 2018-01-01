@@ -3,6 +3,7 @@
 #include <QtCore/QCoreApplication>
 #include <QtGui/QPainter>
 
+#include <QDebug>
 OpenGlOffscreenSurface::OpenGlOffscreenSurface(
         QScreen*     targetScreen,
         const QSize& size)
