@@ -93,7 +93,7 @@ void GLViewWidget::slots_update(){
 }
 
 void GLViewWidget::start(){
-    m_timer->start(30);
+    m_timer->start(33);
 }
 
 void GLViewWidget::stop(){

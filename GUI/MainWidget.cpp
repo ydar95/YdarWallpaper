@@ -25,8 +25,9 @@ MainWidget::MainWidget(QWidget *parent) :
 {
     m_background_view=new GLViewWidget();
     m_background_view->showFullScreen();
-    SetParent((HWND)m_background_view->winId(),WallpaperUtils::GetWorkerW());
-
+    auto hh=WallpaperUtils::GetWorkerW();
+    SetParent((HWND)m_background_view->winId(),hh);
+    qDebug()<<"dasdas"<<hh;
     m_display_list_view=new DiyListView(this);
     m_display_list_view->setGeometry(10,55,580,510);
     m_display_list_view->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -66,6 +67,7 @@ void MainWidget::m_slots_btn_release(){
         m_background_view->stop();
         m_background_view->setFragmentByFile(m_files_vec[m_index]);
         m_background_view->start();
+        m_gl->stop();
     }
     //display("./glsl_code");
 }
