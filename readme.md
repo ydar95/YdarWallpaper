@@ -1,4 +1,5 @@
-#YdarWallpaper 
+
+##YdarWallpaper 
 
 ### 由 GLSL_Render_BackGround 改名,这个名字太难听了
 
@@ -10,6 +11,8 @@
 	4.渲染基本是使用 QT的opengl的库和 freeglut 等
 	5.代码是 QT5 + VS2015 编写的
 ## 几个效果图 ,glsl代码均来自"Glsl Sandbox"
+
+### [demo下载](https://github.com/ydar95/YdarWallpaper/releases)
 
 ### 软件界面
 

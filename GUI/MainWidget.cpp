@@ -25,9 +25,9 @@ MainWidget::MainWidget(QWidget *parent) :
 {
     m_background_view=new GLViewWidget();
     m_background_view->showFullScreen();
-    auto hh=WallpaperUtils::GetWorkerW();
-    SetParent((HWND)m_background_view->winId(),hh);
-    qDebug()<<"dasdas"<<hh;
+
+    SetParent((HWND)m_background_view->winId(),WallpaperUtils::GetWorkerW());
+
     m_display_list_view=new DiyListView(this);
     m_display_list_view->setGeometry(10,55,580,510);
     m_display_list_view->setEditTriggers(QAbstractItemView::NoEditTriggers);
