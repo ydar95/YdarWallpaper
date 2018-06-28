@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/Gui">
+        <file alias="Close_Btn_Default.png">Resource/Gui/Close_Btn_Default.png</file>
+        <file alias="Close_Btn_Touch.png">Resource/Gui/Close_Btn_Touch.png</file>
+        <file alias="MainWindow.png">Resource/Gui/MainWindow.png</file>
+        <file alias="Mini_Btn_Default.png">Resource/Gui/Mini_Btn_Default.png</file>
+        <file alias="Mini_Btn_Touch.png">Resource/Gui/Mini_Btn_Touch.png</file>
+        <file alias="Title.png">Resource/Gui/Title.png</file>
+    </qresource>
+    <qresource prefix="/Frag">
+        <file alias="YdarWallpaper.frag">Resource/Frag/YdarWallPaper.frag</file>
+    </qresource>
+</RCC>
