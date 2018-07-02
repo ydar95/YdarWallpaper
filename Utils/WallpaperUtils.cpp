@@ -13,8 +13,9 @@ HWND WallpaperUtils::GetWallpaperParentHWND(){
     int res;
     HWND windowHandle = FindWindow(L"Progman", nullptr);
     SendMessageTimeout(windowHandle, 0x52c, 0 ,0, SMTO_NORMAL, 0x3e8,(PDWORD_PTR)&res);
-    // ÏûÏ¢»áÉú³ÉÁ½¸öWorkerW ¶¥¼¶´°¿Ú ËùÒÔÒªÃ¶¾Ù²»°üº¬¡°SHELLDLL_DefView¡±Õâ¸öµÄ WorkerW ´°¿Ú Òþ²Øµô¡£
+    // ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WorkerW ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ÒªÃ¶ï¿½Ù²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½SHELLDLL_DefViewï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ WorkerW ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Øµï¿½
     res=0;
     EnumWindows(EnumWindowsProc,(LPARAM)&res);
+    ShowWindow(workerw,SW_HIDE);
     return windowHandle;
 }
